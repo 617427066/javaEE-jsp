@@ -1,0 +1,37 @@
+系统分层：
+	dao：持久层 （数据链路层），进行数据库的增删查改
+		impl  实现类
+		prototype   接口
+	entity (persist)：实体类
+		
+	service(biz) :业务逻辑层，于dao层进行交互
+		impl
+		prototype
+
+	servlet(controller)  控制层
+	util ： 工具类
+
+每层之间的衔接：
+	1.实体类entity 例如：Account 
+	2.Dao层:
+		接口和实现
+		单元测试
+	3.Service层：
+		接口和实现
+		单元测试
+	4.view：
+		jsp页面
+	5.Servlet：
+		控制层代码
+		作用：
+		接收客户端的请求及参数，并跳转页面
+		他可以调用后台的业务代码，获取业务数据
+	6.MVC设计模式
+	
+	（展现）   	（servlet） 		（业务处理后的数据）
+	 View  		  Controller 		 Model
+	7.MVC不是J2EE
+	
+		MVC就是一种设计模式，它能更好的分离前端和后台代码
+		J2EE是一套开发企业级应用的标准规范（接口或者抽象类）
+		javabean   jsp   serlet   jdbc   DataSource

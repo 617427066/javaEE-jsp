@@ -1,0 +1,65 @@
+git客户端
+
+第一次登陆的时候
+git config --global user.name "你的用户名"
+
+git config --global user.email 你的邮箱
+
+
+接管工作目录
+git init 初始化一个git的工作目录
+git status 监控git目录的状态
+git add 文件名. 需要把改变过的文件放到目录里面
+git commit -m "注释" 需要将名单里面的内容放到仓库里面
+
+git log 列出版本
+回到上一个版本  git reset --hard HEA^
+回到某一个版本  git reset --head 版本号
+
+git branch "分支名" 新建一个分支名
+git checkout 分支名 跳转到另一个分支
+默认的主分支 master
+git branch -b xxx  创建并选择
+git merge xxx 合并分支
+git branch -d xxx  删除分支
+
+git clone 地址链接  克隆
+
+上传步骤
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/617427066/uek.git
+git push -u origin master
+
+
+提交作业步骤
+
+1. 在自己的github 中进入老师的作业仓库
+2. 点击fork 克隆文件夹
+3.文件夹放作业
+4. cd 文件夹
+5.git add .
+6. git commit -m "注释"
+7.git push -u origin master
+
+删除远程文件或文件夹
+ 1.克隆远程仓库到本地库。
+git clone git@github.com:xxx/xxx.git
+
+2.对需要删除的文件、文件夹进行如下操作:
+
+git rm test.txt (删除文件)
+
+git rm -r test (删除文件夹)
+
+3.提交修改
+
+git commit -m "Delete some files."
+
+4.将修改提交到远程仓库的xxx分支:
+
+git push origin xxx
+
+
+
